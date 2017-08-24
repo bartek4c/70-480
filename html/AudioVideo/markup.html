@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" >
+
+</head>
+
+<body>
+    
+    <video id="myVideo" width="600" controls duration>
+        <source src="../../ExtraItems/big-buck-bunny_trailer.webm" type="video/webm">
+        <!-- fallback1 -->
+        <source src="../../ExtraItems/SampleVideo_1280x720_5mb.mp4" type="video/mp4">
+
+        <!-- doesnt work locally -->
+        <track label="English" kind="subtitles" srclang="en" src="../../ExtraItems/subtitles_en.vtt">
+
+        <!-- fallback2 -->
+        <object data="videoplayer.swf" type="application/x-shockwave-flash">
+            <param name="movie" value="video.swf"/>
+        </object>
+        Your browser does not support html5 video
+    </video>
+
+    <button id="play">play</button>
+    <button id="pause">pause</button>
+
+</body>
+
+</html>
+
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script src="code.js"></script>
