@@ -7,9 +7,42 @@
 </head>
 
 <body>
-    
-    
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API">
+        Mozilla.org documetation
+    </a>
+    <br />
+    <a href="file:///C:/git/70-480/html/DragAndDrop/filedrop.html">
+        File drop demo
+    </a>
 
+    <p>Drag members to either the Racers or Volunteers list.</p>
+    <ul id="members">
+        <li draggable="true" data-age="38">Brian Albers</li>
+        <li draggable="true" data-age="25">Frank Salim</li>
+        <li draggable="true" data-age="47">Jennifer Clark</li>
+        <li draggable="true" data-age="18">John Kemble</li>
+        <li draggable="true" data-age="20">Lorraine Gaunce</li>
+        <li draggable="true" data-age="30">Mark Wang</li>
+        <li draggable="true" data-age="41">Morgan Stephen</li>
+        <li draggable="true" data-age="39">Peter Lubbers</li>
+        <li draggable="true" data-age="33">Vanessa Combs</li>
+        <li draggable="true" data-age="54">Vivian Lopez</li>
+    </ul>
+    <hr /><br />
+    <div class="dropList">
+        <fieldset id="racersField">
+            <legend>Racers (by Age):</legend>
+            <ul id="racers" dropzone="copy s:text/plain s:text/html" ondrop="handleDrop(event)">
+            <!-- <ul id="racers"></ul> -->
+        </fieldset>
+    </div>
+    <br /><br />
+    <div class="dropList">
+        <fieldset id="volunteersField">
+            <legend>Volunteers (by Name):</legend>
+            <ul id="volunteers"></ul>
+        </fieldset>
+    </div>
 </body>
 
 </html>
