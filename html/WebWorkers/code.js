@@ -1,4 +1,4 @@
-worker = new Worker("file:///C:/git/70-480/html/WebWorkers/echoWorker.js");
+worker = new Worker("echoWorker.js");
 
 function loadDemo() {
     if (typeof(Worker) !== "undefined") {
@@ -10,7 +10,7 @@ function loadDemo() {
 }
 
 function messageHandler(e) {
-    console.log("Got message from web worker: " + e.message);
+    console.log("Got message from web worker: " + e.data);
 }
 
 function errorHandler(e) {
