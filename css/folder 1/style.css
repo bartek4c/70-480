@@ -1,0 +1,29 @@
+h1 {
+    margin: 0;
+}
+
+body {
+    background-image: url('file:///C:/Users/Bartosz%20Malinowski/Desktop/small.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 20px 80px;
+    margin: 0;
+
+}
+
+abbr:hover {
+    cursor: help;
+}
+
+p {
+    width: calc(80% - 50px);
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: lightgray;
+    height: 2000px;
+}
