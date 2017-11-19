@@ -91,6 +91,7 @@ function handleDrop(evt) {
 // if the user drags over our list, show
 // that it allows copy and highlight for better feedback
 function handleDragOverRacers(evt) {
+    //dataTransfer object is accessible on every drag and drop event
     evt.dataTransfer.dropEffect = "copy";
     evt.stopPropagation();
     evt.preventDefault();

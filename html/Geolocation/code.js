@@ -1,7 +1,7 @@
 function loadDemo() {
     if(navigator.geolocation) {
         console.log("Geolocation supported.");
-        /*
+        
         navigator.geolocation.getCurrentPosition(successCallback, errorCallback,
             {
                 enableHighAccuracy: true,
@@ -9,7 +9,6 @@ function loadDemo() {
                 maximumAge: 10000
             }
         );
-        */
 
         var watchId = navigator.geolocation.watchPosition(successCallback, errorCallback);
 

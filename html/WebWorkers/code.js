@@ -1,12 +1,14 @@
-worker = new Worker("echoWorker.js");
-
+//IMPORTANT
+//Works only in Firefox = doesn't work in Chrome for local files
 function loadDemo() {
     if (typeof(Worker) !== "undefined") {
         console.log("Excellent! Your browser supports Web Workers");
-    }
-
-    worker.addEventListener("message", messageHandler, true);
-    worker.addEventListener("error", errorHandler, true);
+        
+        worker = new Worker("echoWorker.js");
+        
+        worker.addEventListener("message", messageHandler, true);
+        worker.addEventListener("error", errorHandler, true);
+    }    
 }
 
 function messageHandler(e) {

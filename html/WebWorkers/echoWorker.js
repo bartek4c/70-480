@@ -1,3 +1,7 @@
+
+
+
+
 function messageHandler(e) {
     postMessage("worker says: " + e.data + " too");
 }

@@ -3,20 +3,23 @@ function loadDemo() {
 
     if (window.applicationCache) {
         console.log("This browser supports offline applications");
+        console.log(window.applicationCache.status);
     }
 
     if (navigator.onLine) {
-        log("Online");
+        console.log("Online");
     } else {
-        log("Offline");
+        console.log("Offline");
     }
 }
 
 // Now add event listeners to notify a change in online status
 window.addEventListener("online", function(e) {
-    log("Online");
+    console.log("Online");
 }, true);
 
 window.addEventListener("offline", function(e) {
-    log("Offline");
+    console.log("Offline");
 }, true);
+
+loadDemo();

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" >
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var canvas = document.getElementById("canvas");
+            var ctxt = canvas.getContext("2d");
+            
+            ctxt.beginPath();
+            ctxt.arc(300, 200, 75, 1.75 * Math.PI, 1.25 * Math.PI, false);
+            ctxt.lineTo(150, 125);
+            ctxt.quadraticCurveTo(300, 0, 450, 125);
+            ctxt.lineTo(353, 144);
+            ctxt.strokeStyle = "blue";
+            ctxt.lineCap = "round";
+            ctxt.lineWidth = 10;
+            var gradient = ctxt.createLinearGradient(200, 200, 400, 200);
+            gradient.addColorStop(0, "Black");
+            gradient.addColorStop(0.5, "Gray");
+            gradient.addColorStop(1,"White");
+            ctxt.fillStyle = gradient;
+            ctxt.fill();
+            ctxt.stroke();
+
+            var canvas2 = document.getElementById("canvas2");
+            var ctxt2 = canvas2.getContext("2d");
+            ctxt2.font = "30px arial";
+            ctxt2.fillStyle = "Red";
+            //ctxt2.strokeStyle = "Red";
+            ctxt2.fillText("1. Text with default font", 100, 100);
+        }
+    </script>
+</head>
+<body>
+
+    <article>
+        <header>
+            <h1>Head of article is bigger</h1>
+        </header>
+
+        <section>
+            <header>
+                <h1>Head of section is smaller</h1>
+            </header>
+
+            <canvas id="canvas" width="600" height="400"></canvas>
+            <canvas id="canvas2" width="600" height="400"></canvas>
+
+            <p>Content of section is paragraph</p>
+        </section>
+
+        <progress max="1"></progress>
+
+    </article>
+
+
+</body>
